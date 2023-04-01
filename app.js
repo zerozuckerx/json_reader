@@ -8,8 +8,6 @@
 const { log } = require('console');
 const express = require('express');
 
-// const connectionString = require('./public/data.json')
-
 const app = express();
 
 app.use(express.static("public"));

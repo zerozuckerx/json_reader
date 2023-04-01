@@ -1,10 +1,5 @@
 // import string from "./data.json" assert {type: "json"}
 
-// const div = document.querySelector(".wrapper");
-// const p = document.createElement("p");
-// p.textContent = string["ConnectionString"];
-// div.appendChild(p)
-
 const { log } = require('console');
 const express = require('express');
 

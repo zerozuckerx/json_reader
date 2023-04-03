@@ -5,7 +5,10 @@ const express = require('express');
 
 const app = express();
 
-app.use(express.static("public"));
+//express .use methods needed to use req.body
+app.use(express.json()); //for json data
+app.use(express.urlencoded({ extended: false })); //for form data
+app.use(express.static("public")); //specify folder for static files
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/index.html");

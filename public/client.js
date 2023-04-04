@@ -1,7 +1,8 @@
-function fetchData() {
-  fetch("./data.json")
+function fetchData(data) {
+  fetch(data)
     .then((res) => res.json())
-    .then((jsonData) => {
+    .then(function (jsonData) {
+      console.log(jsonData);
       const wrapperDiv = document.querySelector(".wrapper");
       const nameP = document.createElement("p");
       const ageP = document.createElement("p");
@@ -14,8 +15,11 @@ function fetchData() {
       wrapperDiv.appendChild(nameP);
       wrapperDiv.appendChild(ageP);
       wrapperDiv.appendChild(emailP);
-    });
+    })
+    .catch(err => console.log(err));
 }
 
 const button = document.querySelector(".fetchButton");
-button.addEventListener("click", fetchData);
+button.addEventListener("click", function() {
+  fetchData("/data.json");
+});

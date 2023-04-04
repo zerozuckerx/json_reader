@@ -1,4 +1,4 @@
-// import string from "./data.json" assert {type: "json"}
+// import string from "./data.json" assert {type: "json"} needs type="module" in js srs link
 
 const { log } = require('console');
 const express = require('express');
